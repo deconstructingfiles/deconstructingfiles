@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px; /* Aumentato per un layout a griglia più ampio */
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
@@ -64,7 +64,7 @@ header .subtitle {
     color: #aaa;
 }
 
-/* --- HOMEPAGE: CASE INDEX --- */
+/* --- HOMEPAGE: CASE INDEX (MODIFICATO) --- */
 main h2 {
     margin-bottom: 2rem;
     text-align: center;
@@ -73,6 +73,8 @@ main h2 {
 
 .case-index-grid {
     display: grid;
+    /* Crea colonne responsive: si adattano automaticamente alla larghezza */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
 }
 
@@ -84,14 +86,33 @@ main h2 {
 .case-file {
     background-color: var(--file-bg);
     border: 1px solid var(--border-color);
-    padding: 1.5rem;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex; /* Aggiunto per un miglior controllo della struttura interna */
+    flex-direction: column; /* Impila l'immagine sopra il contenuto */
+    overflow: hidden; /* Nasconde parti dell'immagine che potrebbero fuoriuscire */
 }
 
 .case-file:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 170, 255, 0.1);
     border-color: var(--accent-blue);
+}
+
+/* NUOVO: Stile per l'immagine di preview */
+.case-preview-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+    object-fit: cover; /* Assicura che l'immagine copra l'area senza deformarsi */
+    display: block; /* Rimuove spazi extra */
+}
+
+/* NUOVO: Contenitore per la parte testuale del caso */
+.case-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Fa in modo che questa sezione occupi lo spazio rimanente */
 }
 
 .case-file .case-header {
@@ -120,6 +141,10 @@ main h2 {
     margin-bottom: 1rem;
 }
 
+.case-tags {
+    margin-top: auto; /* Spinge i tag in fondo alla card */
+}
+
 .case-tags .tag {
     display: inline-block;
     background-color: rgba(255, 215, 0, 0.1);
@@ -132,7 +157,7 @@ main h2 {
     margin-top: 0.5rem;
 }
 
-/* --- PAGINA SINGOLO CASO --- */
+/* --- PAGINA SINGOLO CASO (INVARIATA) --- */
 .case-page-header {
     background-color: var(--file-bg);
     border: 1px solid var(--border-color);
