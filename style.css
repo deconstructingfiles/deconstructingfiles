@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* Aumentato per un layout a griglia più ampio */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
@@ -64,7 +64,7 @@ header .subtitle {
     color: #aaa;
 }
 
-/* --- HOMEPAGE: CASE INDEX (MODIFICATO) --- */
+/* --- HOMEPAGE: CASE INDEX (MODIFICATO PER DUE COLONNE) --- */
 main h2 {
     margin-bottom: 2rem;
     text-align: center;
@@ -73,8 +73,8 @@ main h2 {
 
 .case-index-grid {
     display: grid;
-    /* Crea colonne responsive: si adattano automaticamente alla larghezza */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* MODIFICA CHIAVE: Da responsive a due colonne fisse */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -87,9 +87,9 @@ main h2 {
     background-color: var(--file-bg);
     border: 1px solid var(--border-color);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex; /* Aggiunto per un miglior controllo della struttura interna */
-    flex-direction: column; /* Impila l'immagine sopra il contenuto */
-    overflow: hidden; /* Nasconde parti dell'immagine che potrebbero fuoriuscire */
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
 }
 
 .case-file:hover {
@@ -98,21 +98,19 @@ main h2 {
     border-color: var(--accent-blue);
 }
 
-/* NUOVO: Stile per l'immagine di preview */
 .case-preview-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-    object-fit: cover; /* Assicura che l'immagine copra l'area senza deformarsi */
-    display: block; /* Rimuove spazi extra */
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
+    display: block; 
 }
 
-/* NUOVO: Contenitore per la parte testuale del caso */
 .case-content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Fa in modo che questa sezione occupi lo spazio rimanente */
+    flex-grow: 1; 
 }
 
 .case-file .case-header {
@@ -142,7 +140,7 @@ main h2 {
 }
 
 .case-tags {
-    margin-top: auto; /* Spinge i tag in fondo alla card */
+    margin-top: auto; 
 }
 
 .case-tags .tag {
