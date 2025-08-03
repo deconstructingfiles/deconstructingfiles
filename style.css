@@ -308,3 +308,38 @@ footer {
 .fallacy-card .fallacy-ex strong {
     color: #ccc;
 }
+
+
+/* --- NUOVO: Stile per il Menu di Navigazione Principale --- */
+
+.main-nav {
+    width: 100%;
+    margin-top: 2rem; /* Spazio tra il sottotitolo e il menu */
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.main-nav ul {
+    list-style: none; /* Rimuove i pallini dell'elenco */
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Spazio tra le voci del menu */
+}
+
+.main-nav a {
+    font-family: var(--font-ui);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent; /* Bordo invisibile per l'effetto hover */
+    transition: all 0.2s ease-in-out;
+}
+
+.main-nav a:hover {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue); /* Il bordo appare al passaggio del mouse */
+    text-decoration: none;
+}
