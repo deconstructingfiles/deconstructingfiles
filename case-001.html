@@ -60,27 +60,20 @@
     </div>
     
     <script>
-        // Questo codice carica l'API di YouTube in modo asincrono.
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // Questa variabile globale conterrà il nostro player video.
         var player;
 
-        // Questa funzione viene chiamata automaticamente quando l'API di YouTube è pronta.
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                // Non sono necessari eventi specifici al momento, ma la struttura è pronta.
-            });
+            player = new YT.Player('youtube-player', {});
         }
 
-        // Questa è la funzione che viene chiamata dai nostri link timestamp.
         function seekVideo(seconds) {
-            // Controlla se il player è stato inizializzato
             if (player && typeof player.seekTo === 'function') {
-                player.seekTo(seconds, true); // Va al secondo specificato e avvia la riproduzione
+                player.seekTo(seconds, true);
             }
         }
     </script>
