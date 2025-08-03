@@ -29,7 +29,11 @@
             </div>
 
             <div class="analysis-block">
+<<<<<<< HEAD
                 <p class="timestamp"><a href="javascript:void(0);" onclick="seekVideo(18)" title="Vai al minuto 00:18">[00:18]</a></p>
+=======
+                <p class="timestamp">Affermazione 1</p>
+>>>>>>> parent of 96eb15b (7)
                 <blockquote class="quote">"Mi sembra che la Palestina non abbia nessuno di questi tre caratteristiche."</blockquote>
                 <p class="analysis-note">
                     Secondo Vannacci, la Palestina non può essere uno Stato perché non possiede i tre requisiti fondamentali: popolo, territorio definito, sovranità. Affermare che alla Palestina manchi un "popolo" è fattualmente inaccurato, poiché l'esistenza del popolo palestinese è una realtà storica, culturale e politica consolidata. Partendo da questa premessa errata, la sua conclusione diventa una generalizzazione indebita e un'esagerazione retorica. Anche se si potesse discutere sulla pienezza del controllo del territorio e della sovranità, l'assolutismo della sua affermazione è logicamente insostenibile a causa dell'errore fattuale sul primo punto (il popolo).
@@ -37,7 +41,11 @@
                 <p class="fallacy-id">[!] FALLACIA RILEVATA: Generalizzazione Indebita / Errore Fattuale</p>
             </div>
             <div class="analysis-block">
+<<<<<<< HEAD
                 <p class="timestamp"><a href="javascript:void(0);" onclick="seekVideo(44)" title="Vai al minuto 00:44">[00:44]</a></p>
+=======
+                <p class="timestamp">Affermazione 2</p>
+>>>>>>> parent of 96eb15b (7)
                 <blockquote class="quote">"La sovranità della Palestina se la restringiamo a Gaza chi è? Hamas? Quindi un gruppo terroristico?"</blockquote>
                 <p class="analysis-note">
                     Vannacci prende la caratteristica di una parte del territorio palestinese (la Striscia di Gaza, governata da Hamas) e la estende all'intero concetto di "sovranità della Palestina". La fallacia di composizione scatta nel momento in cui, dopo aver stabilito questa premessa, si induce l'ascoltatore a trasferire la proprietà della parte all'intero. La conclusione non detta, ma a cui la sua retorica guida, è: "Dato che la sovranità su una parte significativa (Gaza) è in mano a un gruppo terroristico, allora l'intero concetto di 'sovranità della Palestina' è inaffidabile, illegittimo o non valido."
@@ -45,7 +53,7 @@
                 <p class="fallacy-id">[!] FALLACIA RILEVATA: Fallacia di Composizione</p>
             </div>
             <div class="analysis-block">
-                <p class="timestamp">Premessa Implicita</p>
+                <p class="timestamp">Affermazione 3 (Premessa Implicita)</p>
                 <blockquote class="quote">L'intera linea argomentativa di Vannacci si basa su una premessa non dichiarata: per poter essere riconosciuto, uno Stato deve già possedere in toto e in forma definitiva le caratteristiche di uno Stato già esistente e consolidato.</blockquote>
                 <p class="analysis-note">
                     Questa argomentazione crea un paradosso insuperabile: non si può ottenere il riconoscimento internazionale senza avere confini stabili e piena sovranità, ma spesso non si possono consolidare i confini e la piena sovranità senza il peso e la legittimità che derivano dal riconoscimento internazionale. La storia stessa contraddice questa logica: lo Stato di Israele fu riconosciuto da molte nazioni, inclusi gli Stati Uniti e l'Unione Sovietica, nel maggio 1948. In quel momento, Israele non aveva confini definiti e universalmente accettati ed entrò subito in guerra con gli stati arabi vicini. Secondo la logica rigida di Vannacci, Israele non avrebbe potuto essere riconosciuto nel 1948 perché non possedeva ancora le caratteristiche definitive di uno stato stabile.
@@ -60,27 +68,20 @@
     </div>
     
     <script>
-        // Questo codice carica l'API di YouTube in modo asincrono.
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // Questa variabile globale conterrà il nostro player video.
         var player;
 
-        // Questa funzione viene chiamata automaticamente quando l'API di YouTube è pronta.
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                // Non sono necessari eventi specifici al momento, ma la struttura è pronta.
-            });
+            player = new YT.Player('youtube-player', {});
         }
 
-        // Questa è la funzione che viene chiamata dai nostri link timestamp.
         function seekVideo(seconds) {
-            // Controlla se il player è stato inizializzato
             if (player && typeof player.seekTo === 'function') {
-                player.seekTo(seconds, true); // Va al secondo specificato e avvia la riproduzione
+                player.seekTo(seconds, true);
             }
         }
     </script>
