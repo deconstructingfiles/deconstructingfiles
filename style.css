@@ -229,3 +229,82 @@ footer {
     font-size: 0.8rem;
     color: #888;
 }
+
+/* --- NUOVO: Stili per la pagina Indice Fallacie --- */
+
+/* Stile per l'header della pagina */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+/* Stile per la barra di navigazione A-Z */
+.az-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.az-nav a {
+    font-family: var(--font-ui);
+    font-size: 1.2rem;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.az-nav a:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    border-color: var(--accent-blue);
+}
+
+/* Stile per le sezioni delle lettere (A, B, C...) */
+.fallacy-section {
+    margin-bottom: 3rem;
+}
+
+.fallacy-section h2 {
+    font-size: 3rem;
+    color: var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Stile per la singola card di una fallacia */
+.fallacy-card {
+    background-color: var(--file-bg);
+    border-left: 4px solid var(--accent-yellow);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.fallacy-card .fallacy-title {
+    font-family: var(--font-mono);
+    color: var(--text-light);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.fallacy-card .fallacy-def {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.fallacy-card .fallacy-ex {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.fallacy-card .fallacy-ex strong {
+    color: #ccc;
+}
