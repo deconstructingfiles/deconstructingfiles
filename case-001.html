@@ -36,6 +36,7 @@
                 </p>
                 <p class="fallacy-id">[!] FALLACIA RILEVATA: Generalizzazione Indebita / Errore Fattuale</p>
             </div>
+
             <div class="analysis-block">
                 <p class="timestamp"><a href="javascript:void(0);" onclick="seekVideo(44)" title="Vai al minuto 00:44">[00:44]</a></p>
                 <blockquote class="quote">"La sovranità della Palestina se la restringiamo a Gaza chi è? Hamas? Quindi un gruppo terroristico?"</blockquote>
@@ -44,6 +45,7 @@
                 </p>
                 <p class="fallacy-id">[!] FALLACIA RILEVATA: Fallacia di Composizione</p>
             </div>
+
             <div class="analysis-block">
                 <p class="timestamp">Premessa Implicita</p>
                 <blockquote class="quote">L'intera linea argomentativa di Vannacci si basa su una premessa non dichiarata: per poter essere riconosciuto, uno Stato deve già possedere in toto e in forma definitiva le caratteristiche di uno Stato già esistente e consolidato.</blockquote>
@@ -52,7 +54,7 @@
                 </p>
                 <p class="fallacy-id">[!] FALLACIA RILEVATA: Premessa Fallace (Paradosso del Riconoscimento)</p>
             </div>
-            </main>
+        </main>
 
         <footer>
             <p>Deconstructing Files è un progetto indipendente di analisi logica.</p>
@@ -64,13 +66,10 @@
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
         var player;
-
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('youtube-player', {});
         }
-
         function seekVideo(seconds) {
             if (player && typeof player.seekTo === 'function') {
                 player.seekTo(seconds, true);
